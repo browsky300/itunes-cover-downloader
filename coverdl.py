@@ -1,7 +1,7 @@
 import requests
 
 query = input("iTunes Cover Downloader\n\nEnter album name: ")
-response = requests.get("https://itunes.apple.com/search?entity=album&limit=1&term=" + query, allow_redirects = True)
+response = requests.get("https://itunes.apple.com/search?entity=album&limit=1&term=\"" + query + "\"", allow_redirects = True)
 
 json = response.json()['results'][0]
 
